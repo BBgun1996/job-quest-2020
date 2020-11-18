@@ -111,11 +111,6 @@ const HomePage = () => {
 
 export default HomePage;
 
-HomePage.propTypes = {
-    student_code: PropType.string,
-    location: PropType.object,
-};
-
 const style = {
     titleCheckBox: { margin: '0 25px' },
 };
