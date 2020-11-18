@@ -8,19 +8,21 @@
     * constants
     * pages
         * Login Page
+        * Sign Up Page
         * Register Page
-        * Sign Up Form
-        * Personal information
-        * Marathon information
-        * Emergency contacts
-        * Medical information
-        * Souvenir shirt
+            * Personal information
+            * Marathon information
+            * Emergency contacts
+            * Medical information
+            * Souvenir shirt
 
 # 2. Library ที่คาดว่าจะใช้สำหรับ Project นี้ พร้อมทั้งระบุด้วยว่าทำไมถึงเลือกใช้ เช่น ใช้ lodash สำหรับการจัดการข้อมูล
-* formik - ใช้สำหรับจัดการฟอร์ม
-* yup - ใช้สำหรับจัดการค่า validate
-* styled-components - ใช้สำหรับจัดการ css
-* react-dropzone - ใช้สำหรับจัดการรูปภาพ
+* axios, axios-retry - สำหรับรับ/ส่งข้อมูลจาก api
+* formik - สำหรับจัดการฟอร์ม
+* yup - สำหรับจัดการค่า validate
+* styled-components - สำหรับจัดการ css
+* react-dropzone - สำหรับจัดการรูปภาพ
+* react-toastify - สำหรับการแจ้งเตือนทั่วไป
 
 # 3. จะต้องจัดการ State ของข้อมูลอย่างไร เพื่อรองรับกับโจทย์นี้ได้
 * ใช้ Formik สำหรับจัดการ state ของแบบฟอร์ม
