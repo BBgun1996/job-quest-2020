@@ -2,7 +2,7 @@ function shift(array = [], way = "left", number) {
     if (number === 0 || array.length < 2) {
         return array
     } else if (number < 0) {
-        return shift(array, way === "left" ? "right" : "left", number);
+        return shift(array, way === "left" ? "right" : "left", -number);
     }
 
     if (way === "right") {
