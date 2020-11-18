@@ -14,7 +14,7 @@ const HomePage = () => {
                 setJokesCount(value);
                 getCategories().then(({ type, value }) => {
                     if (type === "success") {
-                        setAllCategory(value);
+                        setCategory(value);
                     }
                     setLoadingPage(false)
                 });
@@ -26,7 +26,7 @@ const HomePage = () => {
 
     const [loadingPage, setLoadingPage] = useState(true);
     const [jokesCount, setJokesCount] = useState(0);
-    const [allCategory, setAllCategory] = useState([]);
+    const [category, setCategory] = useState([]);
 
     const [firstName, setFirstName] = useState("Tanaporn");
     const [lastName, setLastName] = useState("T.");
@@ -83,10 +83,10 @@ const HomePage = () => {
                             </Row>
                         </Row>
 
-                        {allCategory.length && (
+                        {(category.length > 0) && (
                             <Row>
                                 <p style={style.titleCheckBox}>Filter :</p>
-                                {allCategory.map(o => <InputCheck key={o} value={o} onChange={onSelectCategory} />)}
+                                {category.map(o => <InputCheck key={o} value={o} onChange={onSelectCategory} />)}
                             </Row>
                         )}
 
@@ -95,11 +95,7 @@ const HomePage = () => {
                         {loadingContent ? <LoadingContent /> :
                             ((jokes.length > 0) && <BackgroundPage>
                                 <h1>Result :</h1>
-                                {jokes.map((o, i) => {
-                                    return (
-                                        <p>{(i + 1) + ". " + o.joke.replace(/&quot;/g, `"`)}</p>
-                                    );
-                                })}
+                                {jokes.map((o, i) => <p>{(i + 1) + ". " + o.joke.replace(/&quot;/g, `"`)}</p>)}
                             </BackgroundPage>)
                         }
                     </>
