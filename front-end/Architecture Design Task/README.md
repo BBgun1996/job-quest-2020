@@ -1,5 +1,6 @@
 # 1. Folder Structure ที่จะใช้ในการจัดวาง
 * src
+    * api
     * assets
         * css
         * images
