@@ -38,4 +38,4 @@
 * Submit 
     * ใช้ Formik และ yup ในการจัดการ validate ตามความเหมาะสม
 * สำหรับรูปถ่ายหน้าตรง (ความละเอียดขั้นต่ำ 300x300 pixel บังคับเป็น Square Resolution)
-    * เช็ค validate จาก Dropzone onDrop ก่อนจะเก็บลง formik
+    * เช็ค validate จาก Dropzone onDrop ก่อนจะอัพรูปขึ้น server แล้วค่อยเก็บ id ของรูปลง formik
